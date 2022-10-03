@@ -1,15 +1,10 @@
-﻿Console.Write("Введите число ");
+﻿Console.Write("Введите первое  число ");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число ");
 int b = Convert.ToInt32(Console.ReadLine());
-if (a > b){
-    Console.WriteLine($"Большее число - {a}");
-    Console.WriteLine($"меньшее число - {b}");
-}
-else if (b > a){
-    Console.WriteLine($"Большее число - {b}" );
-    Console.WriteLine($"меньшее число - {a}");
-}
-else{
-    Console.Write("Они равны");
-}
+Console.Write("Введите третье число ");
+int c = Convert.ToInt32(Console.ReadLine());
+int max = a;
+if (max < b) max = b;
+if (max < c) max = c;
+Console.WriteLine(max);
