@@ -1,21 +1,23 @@
-﻿Console.Clear();
-Console.WriteLine("Введите свое число ");
+﻿// Напишите программу, которая принимает на вход цифру,
+// обозначающую день недели, и проверяет,
+// является ли этот день выходным.
+
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+Console.Clear();
+Console.WriteLine("Ведите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int count = 1;
-while (num <= 2)
+if (num >= 1 & num < 6)
 {
-    Console.WriteLine("Введите другое число ");
-    num = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Нет");
 }
-while (count < num)
+else if (num <= 7)
 {
-    if (count % 2 == 0)
-    {
-        Console.Write($" {count}");
-        count = (count + 2);
-    }
-    else if (count % 2 == 1)
-    {
-        count = count + 1;
-    }
+    Console.WriteLine("Да");
+}
+else
+{
+    Console.WriteLine("Введите число от 1 до 7");
 }
