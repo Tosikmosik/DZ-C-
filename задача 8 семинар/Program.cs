@@ -1,20 +1,31 @@
-﻿// Напишите программу, которая принимает на вход цифру, 
-// обозначающую день недели, и проверяет, является ли 
-// этот день выходным.
+﻿// string NumberFor(int a, int b)
+// {
+//     string result = String.Empty;
+//     for (int i = a; i <= b; i++)
+//     {
+//         result += $"{i} ";
+//     }
+//     return result;
+// }
+// string NumberRec(int a, int b)
+// {
+//     if (a <= b) return $"{a} " + NumberRec(a + 1, b);
+//     else return String.Empty;
+// }
 
-// 6 -> да
-// 7 -> да
-// 1 -> нет
+// Console.WriteLine(NumberFor(1, 10));
+// Console.WriteLine(NumberRec(1, 10));
 
-Console.Clear();
-Console.WriteLine("Ведите число: ");
-int num = new Random().Next(0, 7);
-Console.WriteLine(num);
-if (num >= 6)
+int SumFor(int n)
 {
-    Console.WriteLine("Это выходной");
+    int result = 0;
+    for (int i = 1; i <= n; i++) result += i;
+    return result;
 }
-else if (num <= 5)
+int SumRec(int n)
 {
-    Console.WriteLine("Это не выходной");
+    if (n == 0) return 0;
+    else return n + SumRec(n - 1);
 }
+Console.WriteLine(SumFor(10));
+Console.WriteLine(SumRec(11));
